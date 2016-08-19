@@ -24,6 +24,7 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -58,7 +59,7 @@
                     <processTypes>
                         <!-- Tell Heroku how to launch your application -->
                         <!-- You might have to remove the ./ in front   -->
-                        <web>java -jar ./target/roverball-${version}-jar-with-dependencies.jar</web>
+                        <web>java -jar ./target/roverball-jar-with-dependencies.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
