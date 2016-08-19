@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Roverball ditributed collaborative coding game</title>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+ 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<script src="fetchData.js"></script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        }
+        
+    body {
+            background-color: #ABC;
+            color: #123;
+            font-family: verdana;
+        }
+        
+    h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+		
+	#sprites {
+		background-image: url(street-wall2.jpg);
+		background-repeat: no-repeat;
+		width: 1300px;
+		height: 866px;
+		position: relative;
+		}
+		
+	#sprites img {
+		position: absolute;
+		font-weight: bold;
+		text-align: center;
+		vertical-align: bottom;
+		color: #123;
+		width: 50px; height: 62px;
+		}
+		
+	#sprites img:hover { 
+		background-color: #FF2;
+		}
+	
+	#sprites figcaption {
+		position: absolute;
+		top: 0px; left: 20px;
+		width: 1024; height: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+		background-color: rgba(255,255,255,.6);
+	}
+	
+
+    
+</style>
+
+</head>
+<body>
+    <div id="sprites">
+		<img src="sprite.png" alt="Mars Rover" style="left: 220px; top: 100px;" />
+		<img src="sprite.png" alt="Mars Rover" style="left: 400px; top: 100px;" />
+		<img src="sprite.png" alt="Mars Rover" style="left: 510px; top: 100px;" />
+    </div>
+
+    <div id="console">    to overwrite by js </div>
+    
+</body>
+</html>
+
