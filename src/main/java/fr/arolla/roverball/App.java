@@ -1,6 +1,11 @@
 package fr.arolla.roverball;
 
-import static spark.Spark.*;
+import static java.lang.Math.abs;
+import static spark.Spark.get;
+import static spark.Spark.port;
+import static spark.Spark.staticFiles;
+
+import java.util.Random;
 
 public class App {
 
@@ -8,11 +13,19 @@ public class App {
     	staticFiles.location("/public");
         port(getHerokuAssignedPort());
         get("/hello", (req, res) -> {
-            return "0 0 100 100 200 300";
+            return "["
+            		+ "{\"x\": "+random(1300)+",   \"y\": "+random(500)+"}, "
+            		+ "{\"x\": "+random(1300)+",   \"y\": "+random(500)+"}, "
+            		+ "{\"x\": "+random(1300)+",   \"y\": "+random(500)+"}"
+            		+ "]";
         });
     }
 
-    public static final String ln(String line) {
+    private static int random(int max) {
+		return abs(new Random().nextInt() % max) ;
+	}
+
+	public static final String ln(String line) {
         return line + System.lineSeparator();
     }
 
