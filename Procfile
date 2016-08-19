@@ -1,0 +1,1 @@
+web: java -jar ./target/roverball-jar-with-dependencies.jar
