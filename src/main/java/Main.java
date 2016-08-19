@@ -1,6 +1,6 @@
 import static spark.Spark.*;
 
-public class App {
+public class Main {
 
     private static final String NL = System.lineSeparator();
 
