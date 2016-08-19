@@ -5,6 +5,7 @@ import static spark.Spark.*;
 public class App {
 
     public static void main(String[] args) {
+    	staticFiles.location("/public");
         port(getHerokuAssignedPort());
         get("/hello", (req, res) -> {
             return "0 0 100 100 200 300";
